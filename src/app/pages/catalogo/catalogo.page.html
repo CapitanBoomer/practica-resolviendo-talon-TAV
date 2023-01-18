@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Catalogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p>{{servuser.infouser?.firstName}}</p>
+  <ion-card *ngFor="let p of servprod.productos?.products " [routerLink]="">
+    <img [src]="p.images[0]" alt="">
+    <ion-card-content>
+      <ion-card-title>{{p.title}}</ion-card-title>
+      <ion-card-subtitle>{{p.category}}</ion-card-subtitle>
+
+      <ion-note>
+        valoracion:{{p.rating}}
+      </ion-note>
+
+      <ion-note>
+        precio:${{p.price}}
+
+      </ion-note>
+      <ion-note>
+        descuento:{{p.discountPercentage}}%
+      </ion-note>
+
+
+
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>
